@@ -129,9 +129,6 @@ export const rest = (method, url, queryString, body, requestHeaders) => {
       // .then(confirmSuccessResponse)
       .then((response) => parseResponse(response))
       .then((response) => resolve(response))
-      .catch((error) => {
-        alert('error fetching response');
-        reject(error)
-      });
+      .catch((error) => reject(error));
   });
 }
